@@ -1,2 +1,2 @@
-# make-my-ui
+# MakeMyUI
 React UI library built from the ground up using Typescript and Styled Components

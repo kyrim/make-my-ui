@@ -6,7 +6,7 @@ const initialState: { file?: UploadedFile } = {};
 
 import { Upload, UploadedFile } from "../upload";
 
-const stories = storiesOf("UI Components/Upload", module);
+const stories = storiesOf("Upload", module);
 
 stories.add(
   "Upload Image",

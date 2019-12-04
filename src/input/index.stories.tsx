@@ -4,7 +4,7 @@ import { IoIosMail } from "react-icons/io";
 
 import { Input } from "../input";
 
-const stories = storiesOf("UI Components/Input", module);
+const stories = storiesOf("Input", module);
 
 stories.add("default", () => <Input label="Username" />, {
   info: { inline: true }

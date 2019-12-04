@@ -29,7 +29,7 @@ const initialState: State = {
   isLoading: false
 };
 
-const stories = storiesOf("UI Components/Autocomplete", module);
+const stories = storiesOf("Autocomplete", module);
 
 stories.add(
   "default",

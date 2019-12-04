@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 
 import { H1, H2, H3 } from "../typography";
 
-const stories = storiesOf("UI Components/Typography", module);
+const stories = storiesOf("Typography", module);
 
 stories.add("H1", () => <H1>Header 1 size</H1>, { info: { inline: true } });
 

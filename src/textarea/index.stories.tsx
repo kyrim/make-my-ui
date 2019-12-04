@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 
 import { TextArea } from "../textarea";
 
-const stories = storiesOf("UI Components/TextArea", module);
+const stories = storiesOf("TextArea", module);
 
 stories.add("default", () => <TextArea label="Username" />, {
   info: { inline: true }

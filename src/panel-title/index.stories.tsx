@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { PanelTitle } from "../panel-title";
 import { IoMdFunnel } from "react-icons/io";
 
-const stories = storiesOf("Modules/Panel Title", module);
+const stories = storiesOf("PanelTitle", module);
 
 stories.add("default", () => <PanelTitle>Highest Value Assets</PanelTitle>, {
   info: { inline: true }

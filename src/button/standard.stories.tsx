@@ -5,7 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { Button } from "../button";
 import { IoIosAdd, IoIosBasket } from "react-icons/io";
 
-const stories = storiesOf("UI Components/Button/Standard", module);
+const stories = storiesOf("Button/Standard", module);
 
 stories.add("Default Primary", () => (
   <Button text="button" onClick={action("button-click")} />

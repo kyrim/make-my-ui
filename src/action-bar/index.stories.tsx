@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { ActionBar } from "../action-bar";
 import { Link } from "../link";
 
-const stories = storiesOf("UI Components/ActionPanel", module);
+const stories = storiesOf("ActionPanel", module);
 
 stories.add(
   "default",

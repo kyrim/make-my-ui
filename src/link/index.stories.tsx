@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { Link } from "../link";
 import { IoMdSettings } from "react-icons/io";
 
-const stories = storiesOf("UI Components/Link", module);
+const stories = storiesOf("Link", module);
 
 stories.add(
   "default",

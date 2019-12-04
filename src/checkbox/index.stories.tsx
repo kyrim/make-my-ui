@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 
 import { Checkbox } from "../checkbox";
 
-const stories = storiesOf("UI Components/Checkbox", module);
+const stories = storiesOf("Checkbox", module);
 
 stories.add("default", () => <Checkbox label="Username" />, {
   info: { inline: true }

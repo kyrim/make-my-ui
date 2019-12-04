@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { Panel } from "../panel";
 import styled from "styled-components";
 
-const stories = storiesOf("UI Components/Panel", module);
+const stories = storiesOf("Panel", module);
 
 const PanelContainer = styled.div`
   width: 200px;

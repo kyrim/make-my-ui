@@ -2,7 +2,7 @@ import React from "react";
 import { configure, addDecorator } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 
-import { GlobalStyle, defaultTheme } from "../src";
+import { GlobalStyle, defaultTheme } from "../src/styles";
 
 //automatically import all files ending in *.stories.js
 const uiReq = require.context("../src", true, /.stories.tsx$/);

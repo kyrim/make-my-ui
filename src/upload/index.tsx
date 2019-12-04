@@ -4,7 +4,8 @@ import { useCallback } from "react";
 import styled from "styled-components";
 import Color from "color";
 
-import { Image, Spinner } from "..";
+import { Spinner } from "../spinner";
+import { Image } from "../image";
 
 interface Props {
   accept?: string;

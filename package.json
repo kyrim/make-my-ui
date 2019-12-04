@@ -2,7 +2,7 @@
   "license": "MIT",
   "scripts": {
     "start": "start-storybook -s ./ -p 6006",
-    "build": "build-storybook -o docs"
+    "build": "build-storybook -o docs && touch docs/.nojekyll"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

@@ -12,7 +12,7 @@
   "scripts": {
     "start": "start-storybook -s ./ -p 6006",
     "build": "build-storybook -o docs && touch docs/.nojekyll",
-    "prepare": "npx tsc"
+    "prepublishOnly": "npx tsc"
   },
   "dependencies": {
     "@babel/core": "^7.5.5",

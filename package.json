@@ -3,9 +3,9 @@
   "description": "A (WIP 🚧) React UI Library built from scratch using Typescript and Styled Components.",
   "author": "Kyrim Steele",
   "license": "MIT",
-  "version": "1.0.2",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "version": "1.0.3",
+  "main": "/dist/index.js",
+  "types": "/dist/index.d.ts",
   "files": [
     "/dist"
   ],

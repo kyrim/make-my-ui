@@ -14,7 +14,7 @@
     "build": "build-storybook -o docs && touch docs/.nojekyll",
     "prepare": "tsc"
   },
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
     "@storybook/addon-actions": "^5.0.11",
@@ -41,8 +41,6 @@
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.4.1"
-  },
-  "dependencies": {
     "@apollo/react-common": "^3.0.0",
     "@apollo/react-components": "^3.0.0",
     "@apollo/react-hoc": "^3.0.0",

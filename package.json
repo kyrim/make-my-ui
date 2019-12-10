@@ -1,7 +1,7 @@
 {
   "author": "Kyrim Steele",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A (WIP 🚧) React UI Library built from scratch using Typescript and Styled Components.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

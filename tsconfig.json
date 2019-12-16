@@ -10,9 +10,10 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "declaration": true,
+    "sourceMap": true,
     "declarationDir": "./dist",
     "outDir": "./dist",
-    "jsx": "preserve"
+    "jsx": "react"
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/styles/styled.ts"],
   "exclude": ["node_modules"]

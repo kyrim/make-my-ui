@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 
+import noimage from "./noimage.png";
+
 interface Props {
   src?: string;
   alt: string;
@@ -14,11 +16,7 @@ const ImageResponsive = styled.img`
 `;
 
 const Image = ({ src, alt, className }: Props) => (
-  <ImageResponsive
-    className={className}
-    alt={alt}
-    src={src || "/static/noimage.png"}
-  />
+  <ImageResponsive className={className} alt={alt} src={src || noimage} />
 );
 
 export { Image };

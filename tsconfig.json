@@ -15,6 +15,11 @@
     "outDir": "./dist",
     "jsx": "react"
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/styles/styled.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/styles/styled.ts",
+    "src/types.d.ts"
+  ],
   "exclude": ["node_modules"]
 }

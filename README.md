@@ -7,6 +7,9 @@
 
 <h3 style="color:red">🚧 This library is currently WIP and under construction and not ready for production. Please use at your own risk!</h3>
 
+## Demo / Components
+https://kyrim.dev/make-my-ui
+
 ## Installation
 
 Install it from npm and include it in your React build process (using [Webpack](http://webpack.github.io/), [Browserify](http://browserify.org/), etc). You will need to also install styled-components

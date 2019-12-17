@@ -6,9 +6,9 @@ const defaultTheme: DefaultTheme = {
   containerPadding: "5rem",
 
   colors: {
-    primary: "#844DA3",
+    primary: "#8B67F0",
     secondary: "#221C69",
-    complementary: "#67A4F0",
+    complementary: "#64A5f5",
     darkComplementary: "#505074",
     white: "#FFFFFF",
     background: "#FDFCFC",

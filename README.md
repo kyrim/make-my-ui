@@ -5,9 +5,10 @@
   A React UI Library built from scratch using Typescript and Styled Components.
 </p>
 
-<h3 style="color:red">🚧 This library is currently WIP and under construction and not ready for production. Please use at your own risk!</h3>
+<span style="color:red"> ⚠️ Warning: This library is currently WIP and under construction and not ready for production. Please use at your own risk!</span>
 
 ## Demo / Components
+
 https://kyrim.dev/make-my-ui
 
 ## Installation

@@ -13,13 +13,16 @@ Install it from npm and include it in your React build process (using [Webpack](
 ```bash
 npm install --save make-my-ui styled-components
 ```
+
 or:
+
 ```bash
 yarn add make-my-ui styled-components
 ```
 
 ## Usage
-To use make-my-ui, you will need to use Styled Components theme provider at the root of your application. You can use either the defaultTheme, or make use your own.
+
+To use the MakeMyUI library, you will need to use Styled Components theme provider at the root of your application. You can use either the defaultTheme, or make use your own.
 
 ```typescript
 import React from "react";
@@ -34,7 +37,7 @@ class App {
     return (
       <ThemeProvider theme={defaultTheme}>
         <>
-          <GlobalStyle/>
+          <GlobalStyle />
           <div>Your App</div>
         </>
       </ThemeProvider>
@@ -43,5 +46,30 @@ class App {
 }
 
 export default App;
-
 ```
+
+## Custom Theme
+
+To create your own theme, use the defaultTheme as a template located [here](https://github.com/kyrim/make-my-ui/blob/master/src/styles/default-theme.ts), create a new file, customise the values and provide this to the Styled Components `ThemeProvider`.
+
+For example:
+
+```typescript
+import { myTheme } from "../my-theme";
+...
+
+<ThemeProvider theme={myTheme}>
+  <>
+    <GlobalStyle/>
+    <div>Your App</div>
+  </>
+</ThemeProvider>
+```
+
+### External packages
+
+MakeMyUI uses the following packages:
+
+- [react-dropzone](https://github.com/react-dropzone/react-dropzone) (Upload component)
+- [autosize](https://github.com/jackmoore/autosize) (Textarea Component)
+- [downshift](https://github.com/downshift-js/downshift) (Autocomplete Component)

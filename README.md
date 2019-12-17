@@ -7,7 +7,7 @@
 
 ### ⚠️ Warning
 
-This library is currently a work in progress and not currently ready for production. Please use at your own risk!
+This library is currently a work in progress and not ready for production. Please use at your own risk!
 
 ## Demo / Components
 

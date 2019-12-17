@@ -7,11 +7,11 @@
 
 ### ⚠️ Warning
 
-This library is currently a work in progress and not ready for production. Please use at your own risk!
+This library is currently a work in progress and is not ready for production. Please use at your own risk!
 
 ## Demo / Components
 
-https://kyrim.dev/make-my-ui
+A running instance of storybook for this library can be found at: https://kyrim.dev/make-my-ui
 
 ## Installation
 
@@ -29,7 +29,7 @@ yarn add make-my-ui styled-components
 
 ## Usage
 
-To use MakeMyUI, you will need to use Styled Components theme provider at the root of your application. You can use either the defaultTheme, or make use your own.
+To use MakeMyUI, you will need to use Styled Component's ThemeProvider at the root of your application. You can use either the defaultTheme, or use your own.
 
 ```typescript
 import React from "react";
@@ -37,7 +37,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle, defaultTheme, Button } from "make-my-ui";
 
 // You can also import your own theme, extending the DefaultTheme
-//import { myTheme } from "../my-theme";
+// import { myTheme } from "../my-theme";
 
 class App {
   render() {
@@ -58,7 +58,7 @@ export default App;
 
 ## Customise the Theme
 
-To create your own theme, use the defaultTheme as a template located [here](https://github.com/kyrim/make-my-ui/blob/master/src/styles/default-theme.ts), create a new file, customise the values and provide this to the Styled Components `ThemeProvider`.
+To create your own theme, use the defaultTheme as a template, from [here](https://github.com/kyrim/make-my-ui/blob/master/src/styles/default-theme.ts). Create a new file, customise the values and provide this to the Styled Components `ThemeProvider`.
 
 For example:
 

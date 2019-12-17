@@ -29,12 +29,12 @@ yarn add make-my-ui styled-components
 
 ## Usage
 
-To use the MakeMyUI library, you will need to use Styled Components theme provider at the root of your application. You can use either the defaultTheme, or make use your own.
+To use MakeMyUI, you will need to use Styled Components theme provider at the root of your application. You can use either the defaultTheme, or make use your own.
 
 ```typescript
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle, defaultTheme } from "make-my-ui";
+import { GlobalStyle, defaultTheme, Button } from "make-my-ui";
 
 // You can also import your own theme, extending the DefaultTheme
 //import { myTheme } from "../my-theme";
@@ -45,7 +45,8 @@ class App {
       <ThemeProvider theme={defaultTheme}>
         <>
           <GlobalStyle />
-          <div>Your App</div>
+          // Use your components from MakeMyUI inside ThemeProvider
+          <Button />
         </>
       </ThemeProvider>
     );
@@ -55,7 +56,7 @@ class App {
 export default App;
 ```
 
-## Custom Theme
+## Customise the Theme
 
 To create your own theme, use the defaultTheme as a template located [here](https://github.com/kyrim/make-my-ui/blob/master/src/styles/default-theme.ts), create a new file, customise the values and provide this to the Styled Components `ThemeProvider`.
 
@@ -68,7 +69,8 @@ import { myTheme } from "../my-theme";
 <ThemeProvider theme={myTheme}>
   <>
     <GlobalStyle/>
-    <div>Your App</div>
+    // Use your components from MakeMyUI inside ThemeProvider
+    <Button />
   </>
 </ThemeProvider>
 ```

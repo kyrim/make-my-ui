@@ -63,6 +63,7 @@ To create your own theme, use the defaultTheme as a template located [here](http
 For example:
 
 ```typescript
+...
 import { myTheme } from "../my-theme";
 ...
 

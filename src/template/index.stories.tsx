@@ -5,4 +5,4 @@ import { TemplateComponent } from "../template";
 
 const stories = storiesOf("TemplateComponent", module);
 
-stories.add("default", () => <TemplateComponent />, { info: { inline: true } });
+// stories.add("default", () => <TemplateComponent />, { info: { inline: true } });

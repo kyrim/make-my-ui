@@ -2,9 +2,10 @@
 <img src="https://raw.githubusercontent.com/kyrim/make-my-ui/master/logo-96.png" alt="" width=96 height=96>
 <h1 align="center">MakeMyUI</h1>
 <p align="center">
-  A (WIP 🚧) React UI Library built from scratch using Typescript and Styled Components.
+  A React UI Library built from scratch using Typescript and Styled Components.
 </p>
-<br>
+
+<h3 style="color:red">🚧 This library is currently WIP and under construction and not ready for production. Please use at your own risk!</h3>
 
 ## Installation
 

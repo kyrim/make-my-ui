@@ -5,7 +5,9 @@
   A React UI Library built from scratch using Typescript and Styled Components.
 </p>
 
-<span style="color:red"> ⚠️ Warning: This library is currently WIP and under construction and not ready for production. Please use at your own risk!</span>
+### ⚠️ Warning
+
+This library is currently a work in progress and not currently ready for production. Please use at your own risk!
 
 ## Demo / Components
 
@@ -13,7 +15,7 @@ https://kyrim.dev/make-my-ui
 
 ## Installation
 
-Install it from npm and include it in your React build process (using [Webpack](http://webpack.github.io/), [Browserify](http://browserify.org/), etc). You will need to also install styled-components
+Install from npm / yarn and include it in your React build process (using [Webpack](http://webpack.github.io/) etc). You will need to also install styled-components.
 
 ```bash
 npm install --save make-my-ui styled-components

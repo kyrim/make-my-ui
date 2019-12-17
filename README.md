@@ -15,7 +15,7 @@ https://kyrim.dev/make-my-ui
 
 ## Installation
 
-Install from npm / yarn and include it in your React build process (using [Webpack](http://webpack.github.io/) etc). You will need to also install styled-components.
+Install from npm / yarn and include it in your React build process (using [Webpack](http://webpack.github.io/) etc). You will need to also install [Styled Components](https://github.com/styled-components/styled-components).
 
 ```bash
 npm install --save make-my-ui styled-components

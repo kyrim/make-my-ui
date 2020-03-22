@@ -140,7 +140,8 @@ const Loading = styled.li<{ color?: string }>`
   }
 `;
 
-const itemToString = (item: AutocompleteItem) => (item ? item.value : "");
+const itemToString = (item: AutocompleteItem | null) =>
+  item ? item.value : "";
 
 const Autocomplete = ({
   items,
@@ -151,7 +152,7 @@ const Autocomplete = ({
   ...inputProps
 }: Props) => {
   const onChangeMemo = useCallback(
-    (selection: AutocompleteItem) => onSelect(selection),
+    (selection: AutocompleteItem | null) => selection && onSelect(selection),
     []
   );
 

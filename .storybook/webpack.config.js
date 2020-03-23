@@ -16,7 +16,6 @@ module.exports = ({ config, mode }) => {
     new ForkTsCheckerWebpackPlugin({
       async: false,
       checkSyntacticErrors: true
-      // formatter: require("react-dev-utils/typescriptFormatter")
     })
   );
   return config;

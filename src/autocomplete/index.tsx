@@ -15,6 +15,7 @@ interface Props extends InputProps {
   isLoading: boolean;
   onSelect: (item: AutocompleteItem) => void;
   onInputChange: (value: string) => void;
+  initialSelectedItem?: AutocompleteItem;
   className?: string;
 }
 
@@ -148,6 +149,7 @@ const Autocomplete = ({
   onSelect,
   onInputChange,
   isLoading,
+  initialSelectedItem,
   className,
   ...inputProps
 }: Props) => {
@@ -166,6 +168,7 @@ const Autocomplete = ({
       onChange={onChangeMemo}
       onInputValueChange={onInputChangeMemo}
       itemToString={itemToString}
+      initialSelectedItem={initialSelectedItem}
     >
       {({
         getInputProps,

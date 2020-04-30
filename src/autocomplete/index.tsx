@@ -34,14 +34,14 @@ const Results = styled.ul`
   padding: 0;
   overflow: hidden;
 
-  box-shadow: ${props => props.theme.boxShadow};
+  box-shadow: ${(props) => props.theme.boxShadow};
 
-  border-radius: ${props => props.theme.borderRadius};
+  border-radius: ${(props) => props.theme.borderRadius};
 
-  color: ${props => props.color || props.theme.colors.complementary};
-  background-color: ${props => props.theme.colors.white};
+  color: ${(props) => props.color || props.theme.colors.complementary};
+  background-color: ${(props) => props.theme.colors.white};
 
-  z-index: ${props => props.theme.zIndex.dropdown};
+  z-index: ${(props) => props.theme.zIndex.dropdown};
 
   &:empty {
     border-bottom: 0px;
@@ -54,14 +54,14 @@ const Result = styled.li<{
   color: string;
 }>`
   user-select: none;
-  color: ${props => props.color || props.theme.colors.complementary};
-  background-color: ${props =>
+  color: ${(props) => props.color || props.theme.colors.complementary};
+  background-color: ${(props) =>
     props.isHighlighted
       ? Color(props.color || props.theme.colors.complementary)
           .mix(Color("white"), 0.9)
           .toString()
       : "white"};
-  font-weight: ${props => props.theme.font.fontWeightRegular};
+  font-weight: ${(props) => props.theme.font.fontWeightRegular};
   padding-left: 1rem;
 
   &:last-child {
@@ -73,12 +73,12 @@ const NoResult = styled.li<{
   color?: string;
 }>`
   user-select: none;
-  color: ${props => props.color || props.theme.colors.complementary};
+  color: ${(props) => props.color || props.theme.colors.complementary};
   background-color: "white";
   padding-left: 1rem;
 
   border-bottom: 1px solid
-    ${props => props.color || props.theme.colors.complementary};
+    ${(props) => props.color || props.theme.colors.complementary};
 
   &:last-child {
     border-bottom: none;
@@ -89,28 +89,28 @@ const Loading = styled.li<{ color?: string }>`
   user-select: none;
   padding-left: 1rem;
   background: white;
-  color: ${props =>
+  color: ${(props) =>
     Color(props.color || props.theme.colors.complementary)
       .mix(Color("white"), 0.3)
       .toString()};
   background-image: linear-gradient(
     to right,
-    ${props =>
+    ${(props) =>
         Color(props.color || props.theme.colors.complementary)
           .mix(Color("white"), 0.98)
           .toString()}
       0%,
-    ${props =>
+    ${(props) =>
         Color(props.color || props.theme.colors.complementary)
           .mix(Color("white"), 0.96)
           .toString()}
       20%,
-    ${props =>
+    ${(props) =>
         Color(props.color || props.theme.colors.complementary)
           .mix(Color("white"), 0.95)
           .toString()}
       40%,
-    ${props =>
+    ${(props) =>
         Color(props.color || props.theme.colors.complementary)
           .mix(Color("white"), 0.98)
           .toString()}
@@ -151,7 +151,8 @@ const Autocomplete = ({
   isLoading,
   initialSelectedItem,
   className,
-  ...inputProps
+  inputProps,
+  ...restOfProps
 }: Props) => {
   const onChangeMemo = useCallback(
     (selection: AutocompleteItem | null) => selection && onSelect(selection),
@@ -177,20 +178,20 @@ const Autocomplete = ({
         getMenuProps,
         isOpen,
         highlightedIndex,
-        selectedItem
+        selectedItem,
       }) => (
         <div className={className}>
           <Container>
             <InputStyled
-              {...inputProps}
-              inputProps={getInputProps()}
+              {...restOfProps}
+              inputProps={getInputProps(inputProps)}
               labelProps={getLabelProps()}
             />
-            <Results {...getMenuProps()} color={inputProps.color}>
+            <Results {...getMenuProps()} color={restOfProps.color}>
               {isLoading ? (
-                <Loading color={inputProps.color}>&nbsp;</Loading>
+                <Loading color={restOfProps.color}>&nbsp;</Loading>
               ) : isOpen && items.length == 0 ? (
-                <NoResult color={inputProps.color}>No Results</NoResult>
+                <NoResult color={restOfProps.color}>No Results</NoResult>
               ) : (
                 isOpen &&
                 items.map((item, index) => (
@@ -199,7 +200,7 @@ const Autocomplete = ({
                     isSelected={selectedItem == item}
                     key={item.value}
                     {...getItemProps({ item })}
-                    color={inputProps.color}
+                    color={restOfProps.color}
                   >
                     {item.value}
                   </Result>
@@ -220,7 +221,7 @@ Autocomplete.defaultProps = {
   isLoading: false,
   items: [],
   onSelect: () => {},
-  onInputChange: () => {}
+  onInputChange: () => {},
 };
 
 export { Autocomplete };

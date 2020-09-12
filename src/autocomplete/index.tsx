@@ -154,7 +154,6 @@ const Autocomplete = ({
   inputProps,
   ...restOfProps
 }: Props) => {
-  debugger;
   const onChangeMemo = useCallback(
     (selection: AutocompleteItem | null) => selection && onSelect(selection),
     []

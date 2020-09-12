@@ -4,18 +4,20 @@ import styled from "styled-components";
 interface Props {
   src?: string;
   alt: string;
+  height?: number;
+  width?: number;
   className?: string;
 }
 
 const ImageResponsive = styled.img`
   max-width: 100%;
-  border-radius: ${props => props.theme.borderRadius};
+  border-radius: ${(props) => props.theme.borderRadius};
   object-fit: cover;
 `;
 
 const SvgStyled = styled.svg`
   max-width: 100%;
-  border-radius: ${props => props.theme.borderRadius};
+  border-radius: ${(props) => props.theme.borderRadius};
   object-fit: cover;
 `;
 
@@ -32,8 +34,18 @@ const NoImage = (
   </SvgStyled>
 );
 
-const Image = ({ src, alt, className }: Props) =>
-  src ? <ImageResponsive className={className} alt={alt} src={src} /> : NoImage;
+const Image = ({ src, alt, height, width, className }: Props) =>
+  src ? (
+    <ImageResponsive
+      className={className}
+      height={height}
+      width={width}
+      alt={alt}
+      src={src}
+    />
+  ) : (
+    NoImage
+  );
 
 export { Image };
 export type ImageProps = Props;

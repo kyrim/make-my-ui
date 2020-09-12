@@ -11,7 +11,7 @@ This library is currently a work in progress and is not ready for production. Pl
 
 ## Demo / Components
 
-A running instance of storybook for this library can be found at: https://kyrim.dev/make-my-ui
+A running instance of storybook for this library can be found at: https://www.makemyui.com
 
 ## Installation
 

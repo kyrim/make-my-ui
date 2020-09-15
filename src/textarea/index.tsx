@@ -17,10 +17,10 @@ const Field = styled.div<Pick<Props, "state">>`
 
   position: relative;
 
-  opacity: ${props =>
+  opacity: ${(props) =>
     props.state === "disabled" || props.state === "loading" ? 0.75 : 1};
 
-  cursor: ${props =>
+  cursor: ${(props) =>
     (props.state === "disabled" || props.state === "loading") && "not-allowed"};
 
   label {
@@ -38,15 +38,16 @@ const Field = styled.div<Pick<Props, "state">>`
 `;
 
 const LabelStyled = styled.label<Pick<Props, "validationState" | "state">>`
-  color: ${props => colorFromState(props)};
-  font-weight: ${props => props.theme.font.fontWeightBold};
+  color: ${(props) => colorFromState(props)};
+  font-weight: ${(props) => props.theme.font.fontWeightBold};
   font-size: 0.5rem;
 `;
 
 const TextAreaStyled = styled(TextAreaAutosize)<
   Pick<Props, "state" | "validationState">
 >`
-  background-color: transparent;
+  background-color: ${(props) =>
+    Color(colorFromState(props)).mix(Color("white"), 0.9).toString()};
   width: 100%;
   font-size: inherit;
   font-weight: inherit;
@@ -55,41 +56,35 @@ const TextAreaStyled = styled(TextAreaAutosize)<
   padding: 0.75rem 0rem 0.5rem 0.5rem;
   border: none;
   border-bottom: solid 1px
-    ${props =>
-      Color(colorFromState(props))
-        .mix(Color("white"), 0.7)
-        .toString()};
+    ${(props) =>
+      Color(colorFromState(props)).mix(Color("white"), 0.7).toString()};
 
   box-sizing: border-box;
 
-  pointer-events: ${props =>
+  pointer-events: ${(props) =>
     (props.state === "disabled" || props.state === "loading") && "none"};
 
   &::placeholder {
-    color: ${props =>
-      Color(colorFromState(props))
-        .mix(Color("white"), 0.1)
-        .toString()};
+    color: ${(props) =>
+      Color(colorFromState(props)).mix(Color("white"), 0.1).toString()};
   }
 
   &:focus {
-    border-bottom: solid 1px ${props => colorFromState(props)};
+    border-bottom: solid 1px ${(props) => colorFromState(props)};
     outline: 0;
-    box-shadow: 0 2px 6px -8px ${props => colorFromState(props)};
+    box-shadow: 0 2px 6px -8px ${(props) => colorFromState(props)};
   }
 
   &:focus::placeholder {
-    color: ${props =>
-      Color(colorFromState(props))
-        .mix(Color("white"), 0.1)
-        .toString()};
+    color: ${(props) =>
+      Color(colorFromState(props)).mix(Color("white"), 0.1).toString()};
 
     opacity: 0.5;
   }
 `;
 
 const Message = styled.div<Pick<Props, "validationState" | "state">>`
-  color: ${props => colorFromState(props)};
+  color: ${(props) => colorFromState(props)};
   width: 100%;
   font-size: 0.75rem;
   padding: 0.5rem;
@@ -103,7 +98,7 @@ const TextAreaComponent = ({
   validationState,
   message,
   textAreaProps,
-  labelProps
+  labelProps,
 }: Props) => {
   return (
     <TextAreaWrapper className={className}>
@@ -138,7 +133,7 @@ const TextAreaComponent = ({
 
 TextAreaComponent.defaultProps = {
   state: "normal",
-  validationState: "none"
+  validationState: "none",
 };
 
 const TextArea = TextAreaComponent;

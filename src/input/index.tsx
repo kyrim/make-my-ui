@@ -13,9 +13,15 @@ const InputWrapper = styled.div<
   flex-direction: column;
 `;
 
-const Field = styled.div<Pick<Props, "state">>`
+const Field = styled.div<Pick<Props, "state" | "validationState">>`
   display: flex;
   align-items: center;
+  background-color: ${(props) =>
+    Color(colorFromState(props)).mix(Color("white"), 0.9).toString()};
+
+  border-bottom: solid 1px
+    ${(props) =>
+      Color(colorFromState(props)).mix(Color("white"), 0.7).toString()};
 
   position: relative;
 
@@ -50,17 +56,13 @@ const LabelStyled = styled.label`
 `;
 
 const InputStyled = styled.input<Pick<Props, "state" | "validationState">>`
-  background-color: ${(props) =>
-    Color(colorFromState(props)).mix(Color("white"), 0.9).toString()};
+  background-color: transparent;
   width: 100%;
   font-size: inherit;
   font-weight: inherit;
   font: inherit;
   padding: 0.75rem 0rem 0.5rem 0.5rem;
   border: none;
-  border-bottom: solid 1px
-    ${(props) =>
-      Color(colorFromState(props)).mix(Color("white"), 0.7).toString()};
 
   box-sizing: border-box;
 
@@ -87,6 +89,7 @@ const InputStyled = styled.input<Pick<Props, "state" | "validationState">>`
 `;
 
 const InputIcon = styled.div`
+  margin-left: 0.5rem;
   opacity: 0.5;
   color: inherit;
 `;
@@ -118,7 +121,7 @@ const InputComponent = ({
       state={state}
       color={color}
     >
-      <Field state={state}>
+      <Field state={state} validationState={validationState}>
         {Icon && <InputIcon as={Icon} />}
 
         <InputStyled

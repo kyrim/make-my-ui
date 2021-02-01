@@ -1,6 +1,6 @@
 import React from "react";
 
-export type TextAreaValidationState = "none" | "valid" | "invalid";
+import { InputValidationState } from "../input/props";
 
 export type TextAreaState = "normal" | "disabled" | "loading";
 
@@ -9,7 +9,7 @@ export interface Props {
   color?: string;
   label?: string;
   state: TextAreaState;
-  validationState: TextAreaValidationState;
+  validationState: InputValidationState;
   message?: string;
 
   textAreaProps?: React.TextareaHTMLAttributes<HTMLTextAreaElement>;

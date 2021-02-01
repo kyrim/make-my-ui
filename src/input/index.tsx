@@ -121,7 +121,7 @@ const InputComponent = ({
       state={state}
       color={color}
     >
-      <Field state={state} validationState={validationState}>
+      <Field state={state} color={color} validationState={validationState}>
         {Icon && <InputIcon as={Icon} />}
 
         <InputStyled

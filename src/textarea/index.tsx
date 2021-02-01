@@ -15,9 +15,6 @@ const Field = styled.div<Pick<Props, "state" | "validationState">>`
   display: flex;
   align-items: center;
 
-  background-color: ${(props) =>
-    Color(colorFromState(props)).mix(Color("white"), 0.9).toString()};
-
   position: relative;
 
   opacity: ${(props) =>
@@ -47,7 +44,7 @@ const LabelStyled = styled.label<Pick<Props, "validationState" | "state">>`
 `;
 
 const TextAreaStyled = styled(TextAreaAutosize)<
-  Pick<Props, "state" | "validationState">
+  Pick<Props, "color" | "state" | "validationState">
 >`
   width: 100%;
   font-size: inherit;
@@ -59,6 +56,9 @@ const TextAreaStyled = styled(TextAreaAutosize)<
   border-bottom: solid 1px
     ${(props) =>
       Color(colorFromState(props)).mix(Color("white"), 0.7).toString()};
+
+  background-color: ${(props) =>
+     Color(colorFromState(props)).mix(Color("white"), 0.9).toString()};
 
   box-sizing: border-box;
 
@@ -103,7 +103,7 @@ const TextAreaComponent = ({
 }: Props) => {
   return (
     <TextAreaWrapper className={className}>
-      <Field state={state} validationState={validationState}>
+      <Field state={state} color={color} validationState={validationState}>
         <TextAreaStyled
           validationState={validationState}
           color={color}

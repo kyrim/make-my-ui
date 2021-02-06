@@ -5,12 +5,13 @@ import Color from "color";
 import { Props } from "./props";
 import { colorFromState } from "./utility";
 
-const InputWrapper = styled.div<
-  Pick<Props, "color" | "state" | "validationState">
->`
+const InputWrapper = styled.div<Pick<Props, "color" | "state" | "validationState">>`
   color: ${(props) => colorFromState(props)};
   display: flex;
   flex-direction: column;
+  &:focus-within {
+    border-bottom: solid 1px ${(props) => colorFromState(props)};
+  }
 `;
 
 const Field = styled.div<Pick<Props, "state" | "validationState">>`
@@ -75,9 +76,7 @@ const InputStyled = styled.input<Pick<Props, "state" | "validationState">>`
   }
 
   &:focus {
-    border-bottom: solid 1px ${(props) => colorFromState(props)};
     outline: 0;
-    box-shadow: 0 2px 6px -8px ${(props) => colorFromState(props)};
   }
 
   &:focus::placeholder {

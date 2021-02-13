@@ -8,11 +8,12 @@ interface Props {
 }
 
 var PanelBackground = styled.div`
-  background-color: ${props => props.theme.colors.white};
-  border-radius: ${props => props.theme.borderRadius};
+  background-color: ${(props) => props.theme.colors.white};
+  border-radius: ${(props) => props.theme.borderRadius};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
   width: 100%;
   height: 100%;
+  border: 1px solid ${(props) => props.theme.colors.secondary};
 `;
 
 const Panel = (props: Props) => (
